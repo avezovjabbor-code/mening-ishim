@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshMart - Grocery Shopping Mobile App</title>
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Luxury Background Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Desktop Presentation Controls Panel -->
+  <aside class="desktop-panel">
+    <div class="panel-header">
+      <div class="brand-badge">⚡ FreshMart Mobile Web</div>
+      <h1>Mobil Telefon Websayti</h1>
+      <p class="panel-subtitle">Taqdim etilgan 3 ta ekran (Onboarding, Bosh sahifa, Buyurtma sahifasi) to'liq interaktiv shaklda ishlab chiqildi.</p>
+    </div>
+
+    <div class="screen-switch-tabs">
+      <span class="switcher-title">Ekranlar navigatsiyasi:</span>
+      <button class="switch-tab-btn active" data-target="screen-onboarding" id="btn-tab-onboarding">
+        <span class="icon">✨</span>
+        <div class="btn-info">
+          <strong>1. Kirish (Onboarding)</strong>
+          <small>Welcome screen & Get Started</small>
+        </div>
+      </button>
+      <button class="switch-tab-btn" data-target="screen-home" id="btn-tab-home">
+        <span class="icon">🛒</span>
+        <div class="btn-info">
+          <strong>2. Asosiy Do'kon (Home)</strong>
+          <small>Mahsulotlar, qidiruv, takliflar</small>
+        </div>
+      </button>
+      <button class="switch-tab-btn" data-target="screen-order" id="btn-tab-order">
+        <span class="icon">📦</span>
+        <div class="btn-info">
+          <strong>3. Mahsulot tafsiloti (Order)</strong>
+          <small>Red Apple, narx, savatga qo'shish</small>
+        </div>
+      </button>
+    </div>
+
+    <!-- Quick Stats & Actions -->
+    <div class="desktop-card">
+      <div class="cart-summary-box">
+        <div class="summary-row">
+          <span>🛒 Savatdagi mahsulotlar:</span>
+          <span class="badge-count" id="desktop-cart-count">1 ta</span>
+        </div>
+        <div class="summary-row">
+          <span>💰 Jami hisob:</span>
+          <strong id="desktop-cart-total">$25.00</strong>
+        </div>
+      </div>
+      <div class="tips-box">
+        💡 <strong>Mobil interaktivlik:</strong> Telefon ichidagi tugmalarni bosib ekranlar o'rtasida erkin harakatlanishingiz, mahsulotlarni qidirishingiz, yoqtirish (❤️) va savatga qo'shishingiz mumkin!
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mobile Phone Mockup Device -->
+  <main class="phone-viewport-container">
+    <div class="phone-device-frame">
+      <!-- Phone Bezel / Speaker & Camera Punch Hole -->
+      <div class="phone-notch-bar">
+        <span class="status-time" id="status-time-display">9:30</span>
+        <div class="phone-camera-punch"></div>
+        <div class="status-icons">
+          <!-- Signal Icon -->
+          <svg class="sys-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2 18h2v3H2zm4-4h2v7H6zm4-4h2v11h-2zm4-5h2v16h-2zm4-5h2v21h-2z"/>
+          </svg>
+          <!-- Wifi Icon -->
+          <svg class="sys-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98A16.88 16.88 0 0 0 12 4zm0 3.5c3.27 0 6.27 1.23 8.55 3.26L12 19.32 3.45 10.76A13.4 13.4 0 0 1 12 7.5z"/>
+          </svg>
+          <!-- Battery Icon -->
+          <svg class="sys-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 4h-2V2h-4v2H8c-.55 0-1 .45-1 1v16c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zm-1 10H9V6h6v8z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- SCREENS CONTAINER -->
+      <div class="screens-wrapper">
+
+        <!-- ==============================================
+             SCREEN 1: ONBOARDING SCREEN
+             ============================================== -->
+        <section class="app-screen screen-onboarding active" id="screen-onboarding">
+          <!-- Top Yellow Warm Section with Couple Photo -->
+          <div class="onboard-top-section">
+            <div class="onboard-hero-card">
+              <img src="images/onboarding_hero.jpg" alt="Baxtli ota-ona sabzavotlar bilan" class="hero-couple-img">
+              <!-- Custom smooth bottom curve -->
+              <div class="hero-curve-mask"></div>
+              <!-- Small Fruit Basket Badge at bottom center of curve -->
+              <div class="basket-badge-wrapper">
+                <div class="basket-circle">
+                  <div class="basket-icon-art">🧺</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Typography and Button -->
+          <div class="onboard-bottom-content">
+            <h1 class="onboard-title">
+              Making Grocery<br>Shopping Effortless<br>and Enjoyable
+            </h1>
+
+            <button class="btn-primary-orange" id="btn-get-started">
+              Get Started
+            </button>
+          </div>
+
+          <!-- Android/iOS Home Indicator Line -->
+          <div class="phone-home-indicator"></div>
+        </section>
+
+
+        <!-- ==============================================
+             SCREEN 2: HOME SCREEN
+             ============================================== -->
+        <section class="app-screen screen-home" id="screen-home">
+          <!-- Top Bar: Menu, Location, Notification -->
+          <header class="home-header">
+            <button class="icon-round-btn menu-btn" id="btn-home-menu" title="Menyu">
+              <span class="menu-bar"></span>
+              <span class="menu-bar"></span>
+              <span class="menu-bar"></span>
+            </button>
+
+            <div class="location-picker">
+              <div class="loc-label">
+                <span class="pin-icon">📍</span>
+                <span>Location</span>
+              </div>
+              <div class="loc-address">4517 Washington Ave</div>
+            </div>
+
+            <button class="icon-round-btn notif-btn" id="btn-notification" title="Bildirishnomalar">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+              <span class="notif-badge"></span>
+            </button>
+          </header>
+
+          <!-- Search Bar & Filter Button -->
+          <div class="search-section">
+            <div class="search-input-box">
+              <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="search-input" placeholder="Search fresh fruits..." autocomplete="off">
+            </div>
+            <button class="filter-btn" id="btn-filter" title="Filtr">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Scrollable Body Content -->
+          <div class="home-scroll-area">
+            <!-- Promo Banner -->
+            <div class="promo-card-orange">
+              <div class="promo-pill-black">Special Offer</div>
+              <div class="promo-text-wrap">
+                <h2>Free Delivery For<br>Next Three Orders</h2>
+                <button class="btn-open-now" id="btn-promo-open">Open Now</button>
+              </div>
+              <div class="promo-img-wrap">
+                <img src="images/promo_girl.jpg" alt="Smiling girl with fresh fruits basket" class="promo-girl-photo">
+              </div>
+            </div>
+
+            <!-- Categories Section -->
+            <div class="categories-header">
+              <h3>Categories</h3>
+              <a href="#" class="see-all-link" id="link-see-all">See All</a>
+            </div>
+
+            <div class="category-pills-row" id="categories-list">
+              <button class="cat-pill active" data-category="fruits">
+                <span class="cat-letter">F</span>
+                <span>Fruits</span>
+              </button>
+              <button class="cat-pill" data-category="fastfood">
+                <span>Fast-food</span>
+              </button>
+              <button class="cat-pill" data-category="vegetables">
+                <span>Vegetables</span>
+              </button>
+              <button class="cat-pill" data-category="grocery">
+                <span>Groceries</span>
+              </button>
+              <button class="cat-pill" data-category="drinks">
+                <span>Drinks</span>
+              </button>
+            </div>
+
+            <!-- Products Grid (2 columns as in image) -->
+            <div class="products-grid" id="products-grid">
+              
+              <!-- Product 1: Orange -->
+              <div class="product-card" data-id="orange" data-title="Orange" data-price="4.00" data-oldprice="10.00" data-img="images/orange.jpg" data-desc="Shirin va sharbatli yangi apelsinlar. C vitamini bilan boyitilgan, kunlik energiya manbai.">
+                <div class="card-thumb-wrap">
+                  <img src="images/orange.jpg" alt="Orange" class="product-thumb">
+                  <button class="heart-fav-btn" title="Sevimlilarga qo'shish">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="card-info">
+                  <h4 class="prod-title">Orange</h4>
+                  <div class="card-bottom-row">
+                    <div class="price-tags">
+                      <span class="old-price">$10.00</span>
+                      <span class="current-price">$4.00</span>
+                    </div>
+                    <button class="btn-add-circle" title="Savatga qo'shish" data-action="quick-add">
+                      <span>+</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 2: Strawberry -->
+              <div class="product-card" data-id="strawberry" data-title="Strawbery" data-price="31.00" data-oldprice="30.00" data-img="images/strawberry.jpg" data-desc="Yangi uzilgan shirin qulupnaylar. Sarxil, xushbo'y va ajoyib ta'mga ega tabiat in'omi.">
+                <div class="card-thumb-wrap">
+                  <img src="images/strawberry.jpg" alt="Strawbery" class="product-thumb">
+                  <button class="heart-fav-btn" title="Sevimlilarga qo'shish">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="card-info">
+                  <h4 class="prod-title">Strawbery</h4>
+                  <div class="card-bottom-row">
+                    <div class="price-tags">
+                      <span class="old-price">$30.00</span>
+                      <span class="current-price highlight-red">$31.00</span>
+                    </div>
+                    <button class="btn-add-circle" title="Savatga qo'shish" data-action="quick-add">
+                      <span>+</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 3: Red Apple (Clicking opens Detail Screen) -->
+              <div class="product-card" data-id="apple" data-title="Red Apple" data-price="25.00" data-oldprice="35.00" data-img="images/apple.jpg" data-desc="Eng saralangan qizil olma. Shirin, tiniq qarsildoq va vitaminlarga juda boy hosil.">
+                <div class="card-thumb-wrap">
+                  <img src="images/apple.jpg" alt="Red Apple" class="product-thumb">
+                  <button class="heart-fav-btn" title="Sevimlilarga qo'shish">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="card-info">
+                  <h4 class="prod-title">Red Apple</h4>
+                  <div class="card-bottom-row">
+                    <div class="price-tags">
+                      <span class="old-price">$35.00</span>
+                      <span class="current-price">$25.00</span>
+                    </div>
+                    <button class="btn-add-circle" title="Savatga qo'shish" data-action="quick-add">
+                      <span>+</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 4: Banana -->
+              <div class="product-card" data-id="banana" data-title="Banana" data-price="12.00" data-oldprice="18.00" data-img="images/banana.jpg" data-desc="Ekvadorning sara yangi pishgan shirin bananlari. Qulay va to'yimli meva.">
+                <div class="card-thumb-wrap">
+                  <img src="images/banana.jpg" alt="Banana" class="product-thumb">
+                  <button class="heart-fav-btn" title="Sevimlilarga qo'shish">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="card-info">
+                  <h4 class="prod-title">Banana</h4>
+                  <div class="card-bottom-row">
+                    <div class="price-tags">
+                      <span class="old-price">$18.00</span>
+                      <span class="current-price">$12.00</span>
+                    </div>
+                    <button class="btn-add-circle" title="Savatga qo'shish" data-action="quick-add">
+                      <span>+</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bottom Navigation Bar -->
+          <nav class="bottom-nav-bar">
+            <button class="nav-item active" id="nav-home" title="Asosiy">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Home</span>
+            </button>
+
+            <button class="nav-item" id="nav-pickup" title="Pick up">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              <span>Pick up</span>
+              <span class="cart-pill-bubble" id="mobile-cart-badge">1</span>
+            </button>
+
+            <button class="nav-item" id="nav-search" title="Qidiruv">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Search</span>
+            </button>
+
+            <button class="nav-item" id="nav-chat" title="Chat">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>Chat</span>
+            </button>
+
+            <button class="nav-item" id="nav-profile" title="Profil">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>Profile</span>
+            </button>
+          </nav>
+
+          <!-- Android/iOS Home Indicator Line -->
+          <div class="phone-home-indicator"></div>
+        </section>
+
+
+        <!-- ==============================================
+             SCREEN 3: ORDER / PRODUCT DETAIL SCREEN
+             ============================================== -->
+        <section class="app-screen screen-order" id="screen-order">
+          <!-- Top Bar with Back, Title, More -->
+          <div class="order-top-bar">
+            <button class="icon-round-btn back-btn" id="btn-order-back" title="Orqaga">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <h2 class="order-nav-title">Order</h2>
+            <button class="icon-round-btn more-btn" id="btn-order-more" title="Qo'shimcha">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <circle cx="12" cy="5" r="2"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+                <circle cx="12" cy="19" r="2"></circle>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Big Hero Product Image Area -->
+          <div class="order-hero-container">
+            <img src="images/apple.jpg" alt="Selected Product" class="order-main-img" id="detail-product-img">
+            
+            <!-- Floating Bargain Switch Card -->
+            <div class="bargain-capsule-bar">
+              <span class="bargain-text">All bargain</span>
+              <label class="toggle-pill-switch" title="All bargain yoqish/o'chirish">
+                <input type="checkbox" id="bargain-toggle" checked>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Bottom Sheet Card Details -->
+          <div class="order-detail-sheet">
+            <!-- 70% ON Badge -->
+            <div class="sheet-top-badge-row">
+              <span class="badge-black-pill">70% on</span>
+            </div>
+
+            <!-- Product Title, Star & Price -->
+            <div class="sheet-title-price-row">
+              <div class="sheet-title-star">
+                <h3 id="detail-product-title">Red Apple</h3>
+                <span class="star-rating">⭐</span>
+              </div>
+              <div class="sheet-price-kg">
+                <span class="price-val" id="detail-product-price">$25</span><span class="unit-text">kg</span>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="sheet-desc-section">
+              <h4>Description</h4>
+              <p class="desc-text" id="detail-product-desc">
+                Eng saralangan va tabiiy shirin qizil olma. Bog'dan to'g'ridan-to'g'ri yangi uzilgan, vitaminlar va antioksidantlarga boy, xushbo'y va shirin ta'mga ega.
+              </p>
+            </div>
+
+            <!-- Add Ingredients Section -->
+            <div class="sheet-ingredients-section">
+              <h4>Add Ingredients</h4>
+              <label class="ingredient-card" for="chk-strawberry-extra">
+                <div class="ing-thumb-box">
+                  <img src="images/strawberry.jpg" alt="Extra Strawberry">
+                </div>
+                <div class="ing-info">
+                  <strong class="ing-name">Strawberrry</strong>
+                  <span class="ing-weight">2hg+kg</span>
+                </div>
+                <div class="custom-checkbox-wrap">
+                  <input type="checkbox" id="chk-strawberry-extra" checked>
+                  <span class="checkmark"></span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Bottom Action Footer: Quantity & Add to Cart -->
+            <div class="sheet-actions-footer">
+              <div class="qty-counter-box">
+                <button class="qty-btn" id="btn-qty-minus" title="Kamaytirish">
+                  <!-- Trash icon if qty == 1 or minus -->
+                  <svg id="qty-minus-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="3 6 5 6 21 6"></polyline>
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  </svg>
+                </button>
+                <span class="qty-number" id="detail-qty-val">1</span>
+                <button class="qty-btn" id="btn-qty-plus" title="Oshirish">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+
+              <button class="btn-add-to-cart" id="btn-add-to-cart">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Android/iOS Home Indicator Line -->
+          <div class="phone-home-indicator"></div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Interactive Toast Notification Popup -->
+  <div class="toast-popup" id="app-toast">
+    <div class="toast-icon">✅</div>
+    <div class="toast-msg">Mahsulot savatga qo'shildi!</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
